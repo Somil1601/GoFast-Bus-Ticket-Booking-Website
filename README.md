@@ -6,6 +6,26 @@ GoFast is a responsive bus ticket booking website developed as an ICT course pro
 
 ---
 
+## 📸 Screenshots
+
+### Home Page
+
+![Home](screenshots/2026-07-15164220.png)
+![Home](screenshots/2026-07-15164230.png)
+
+### Booking Page
+
+![Booking](screenshots/booking.png)
+
+### About Page
+
+![About](screenshots/about.png)
+
+### Routes Page
+
+![Routes](screenshots/routes.png)
+---
+
 ## ✨ Features
 
 - Responsive homepage
