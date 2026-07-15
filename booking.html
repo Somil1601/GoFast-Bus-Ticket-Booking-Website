@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GO FAST — Booking</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f6fb;
+    }
+
+    .top-bar {
+        background: white;
+        padding: 18px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .brand {
+        font-size: 28px;
+        font-weight: bold;
+        color: #1e4ecf;
+    }
+
+    .home-btn {
+        text-decoration: none;
+        background: #1e4ecf;
+        color: white;
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .home-btn:hover {
+        background: #163da3;
+    }
+
+    .container {
+        width: 480px;
+        margin: 60px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1e4ecf;
+        font-size: 28px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    select, input {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0 18px 0;
+        border-radius: 8px;
+        border: 1px solid #bbb;
+        outline: none;
+        transition: 0.25s;
+        font-size: 15px;
+    }
+
+    select:focus, input:focus {
+        border-color: #1e4ecf;
+        box-shadow: 0 0 6px rgba(30,78,207,0.3);
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+        background: #1e4ecf;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #163da3;
+    }
+
+    #result {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        background: #e8f0ff;
+        border-left: 5px solid #1e4ecf;
+        display: none;
+        font-size: 16px;
+        color: #333;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="brand">🚌 GO FAST</div>
+    <a href="home.html" class="home-btn">Home</a>
+</div>
+
+<div class="container">
+    <h2>Book Your Ticket</h2>
+
+    <label>Full Name</label>
+    <input type="text" id="username" placeholder="Enter your full name">
+
+    <label>CNIC (13 digits)</label>
+    <input type="text" id="cnic" maxlength="13" placeholder="4210112345678">
+
+    <label>Phone Number (11 digits)</label>
+    <input type="text" id="phone" maxlength="11" placeholder="03XXXXXXXXX">
+
+    <label>Gender</label>
+    <select id="gender">
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <label>Select Route</label>
+    <select id="route">
+        <option value="700">Hyderabad → Karachi (700 PKR)</option>
+        <option value="2500">Hyderabad → Sukkur (2500 PKR)</option>
+        <option value="4000">Hyderabad → Multan (4000 PKR)</option>
+        <option value="6000">Hyderabad → Lahore (6000 PKR)</option>
+        <option value="7500">Hyderabad → Islamabad (7500 PKR)</option>
+
+        <option value="3200">Karachi → Sukkur (3202 PKR)</option>
+        <option value="4500">Karachi → Multan (4500 PKR)</option>
+        <option value="6500">Karachi → Lahore (6500 PKR)</option>
+        <option value="8000">Karachi → Islamabad (8000 PKR)</option>
+
+        <option value="3000">Multan → Lahore (3000 PKR)</option>
+        <option value="5000">Multan → Islamabad (5000 PKR)</option>
+        <option value="3500">Lahore → Islamabad (3500 PKR)</option>
+    </select>
+
+    <label>Number of Seats (Max 7)</label>
+    <input type="number" id="seats" min="1" max="7">
+
+    <button onclick="bookTicket()">Book Ticket</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function bookTicket() {
+    let name = document.getElementById("username").value;
+    let cnic = document.getElementById("cnic").value;
+    let phone = document.getElementById("phone").value;
+    let gender = document.getElementById("gender").value;
+    let seats = document.getElementById("seats").value;
+    let price = document.getElementById("route").value;
+    let total = seats * price;
+
+    if (name.trim() === "") {
+        alert("Please enter your full name.");
+        return;
+    }
+    if (cnic.length !== 13 || isNaN(cnic)) {
+        alert("CNIC must be exactly 13 digits.");
+        return;
+    }
+    if (phone.length !== 11 || isNaN(phone)) {
+        alert("Phone must be exactly 11 digits.");
+        return;
+    }
+    if (seats < 1 || seats > 7) {
+        alert("You can book 1 to 7 seats maximum.");
+        return;
+    }
+
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result").innerHTML =
+        "<b>Booking Successful!</b><br><br>" +
+        "Name: " + name + "<br>" +
+        "Gender: " + gender + "<br>" +
+        "CNIC: " + cnic + "<br>" +
+        "Phone: " + phone + "<br>" +
+        "Seats Booked: " + seats + "<br>" +
+        "Total Price: <b>" + total + " PKR</b>";
+}
+</script>
+
+</body>
+</html>

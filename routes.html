@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GO FAST — Routes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef3f8;
+    }
+
+    #box1 {
+      background: #012a4a;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    #box1 h3 {
+      margin: 0;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .button3d {
+      padding: 10px 20px;
+      background: #f1c40f;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .button3d:hover {
+      background: #ffe680;
+      transform: scale(1.05);
+    }
+
+    .terminal-section {
+      padding: 60px 30px;
+      background: white;
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #012a4a;
+      font-size: 42px;
+      font-family: fantasy;
+      letter-spacing: 2px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 18px;
+    }
+
+    th {
+      background: #012a4a;
+      color: white;
+      padding: 16px;
+      text-align: left;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #dcdcdc;
+      font-weight: 500;
+    }
+
+    tr:hover {
+      background: #f4f9ff;
+    }
+
+    .btn-route {
+      padding: 8px 14px;
+      background: #012a4a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .btn-route:hover {
+      background: #f1c40f;
+      color: #000;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="box1">
+    <h3><span aria-hidden="true">🚌</span>GO FAST</h3>
+    <a href="home.html" class="button3d home">Home</a>
+  </div>
+
+  <section class="terminal-section">
+    <h2 class="h2">Our Routes</h2>
+
+    <table>
+      <tr>
+        <th>Route</th>
+        <th>Departure</th>
+        <th>Contact</th>
+        <th>Timings</th>
+        <th>Action</th>
+      </tr>
+
+      <tr>
+        <td>Karachi → Lahore</td>
+        <td>Sohrab Goth Terminal</td>
+        <td>0311-4234243</td>
+        <td>6 AM – 1 AM</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Karachi → Islamabad</td>
+        <td>Sohrab Goth Terminal</td>
+        <td>0333-8899001</td>
+        <td>24/7</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Lahore → Islamabad</td>
+        <td>Thokar Niaz Baig</td>
+        <td>0322-9876543</td>
+        <td>6 AM – 12 AM</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Lahore → Multan</td>
+        <td>Lahore City Terminal</td>
+        <td>0309-2288992</td>
+        <td>7 AM - 11 PM</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Islamabad → Multan</td>
+        <td>Faizabad Terminal</td>
+        <td>0300-9988776</td>
+        <td>24/7</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Islamabad → Sukkur</td>
+        <td>Faizabad Terminal</td>
+        <td>0315-3344556</td>
+        <td>5 AM - 10 PM</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Multan → Hyderabad</td>
+        <td>Multan Cantt Terminal</td>
+        <td>0344-5566778</td>
+        <td>8 AM - 11 PM</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Sukkur → Hyderabad</td>
+        <td>Sukkur City Terminal</td>
+        <td>0302-7788990</td>
+        <td>7 AM - 12 AM</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+      <tr>
+        <td>Hyderabad → Karachi</td>
+        <td>Hyderabad Bus Terminal</td>
+        <td>0317-6655443</td>
+        <td>Every Hour</td>
+        <td><a href="booking.html" class="btn-route">Book</a></td>
+      </tr>
+
+    </table>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Terminals</title>
+
+    <style>
+          .top-bar {
+        background: white;
+        padding: 18px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .brand {
+        font-size: 28px;
+        font-weight: bold;
+        color: #1e4ecf;
+    }
+
+    .home-btn {
+        text-decoration: none;
+        background: #1e4ecf;
+        color: white;
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .home-btn:hover {
+        background: #163da3;
+    }
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6fb;
+        }
+        .heading {
+            text-align: left;
+            padding: 40px 80px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+        }
+        .heading-line {
+            width: 120px;
+            height: 4px;
+            background: #1e4ecf;
+            margin-left: 80px;
+            margin-top: -30px;
+            margin-bottom: 40px;
+        }
+        .terminal-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 0 80px 50px 80px;
+        }
+        .terminal-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: .3s;
+        }
+        .terminal-card:hover {
+            transform: translateY(-5px);
+        }
+        .terminal-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .terminal-info {
+            padding: 20px;
+        }
+        .terminal-info h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #1e4ecf;
+        }
+        .terminal-info p {
+            margin: 8px 0;
+            color: #333;
+            line-height: 1.5;
+        }
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+    <div class="brand">🚌 GO FAST</div>
+    <a href="home.html" class="home-btn">Home</a>
+    </div>
+
+
+    <div class="heading">OUR TERMINALS</div>
+    <div class="heading-line"></div>
+
+    <div class="terminal-container">
+
+        <div class="terminal-card">
+            <div class="terminal-img">
+                <img src="Lahore.png" alt="Lahore Terminal">
+            </div>
+            <div class="terminal-info">
+                <h2>Lahore Terminal</h2>
+                <p><span class="label">Address:</span> Thokar Niaz Baig near PSO Petrol Pump, Lahore</p>
+                <p><span class="label">Phone:</span> 042-111-111-111</p>
+            </div>
+        </div>
+
+        <div class="terminal-card">
+            <div class="terminal-img">
+                <img src="Karachi.png" alt="Karachi Terminal">
+            </div>
+            <div class="terminal-info">
+                <h2>Karachi Terminal</h2>
+                <p><span class="label">Address:</span> Al-Asif Bus Stop, Karachi</p>
+                <p><span class="label">Phone:</span> 021-111-222-333</p>
+            </div>
+        </div>
+
+        <div class="terminal-card">
+            <div class="terminal-img">
+                <img src="Islamabad.png" alt="Islamabad Terminal">
+            </div>
+            <div class="terminal-info">
+                <h2>Islamabad Terminal</h2>
+                <p><span class="label">Address:</span> Faizabad Terminal, Islamabad</p>
+                <p><span class="label">Phone:</span> 051-111-444-555</p>
+            </div>
+        </div>
+
+        <div class="terminal-card">
+            <div class="terminal-img">
+                <img src="Multan.png" alt="Multan Terminal">
+            </div>
+            <div class="terminal-info">
+                <h2>Multan Terminal</h2>
+                <p><span class="label">Address:</span> General Bus Stand, Multan</p>
+                <p><span class="label">Phone:</span> 061-111-777-999</p>
+            </div>
+        </div>
+
+        <div class="terminal-card">
+            <div class="terminal-img">
+                <img src="Hyderabad.png" alt="Hyderabad Terminal">
+            </div>
+            <div class="terminal-info">
+                <h2>Hyderabad Terminal</h2>
+                <p><span class="label">Address:</span> Badin Stop, Hyderabad</p>
+                <p><span class="label">Phone:</span> 021-111-222-124</p>
+            </div>
+        </div>
+
+        <div class="terminal-card">
+            <div class="terminal-img">
+                <img src="Sukkur.png" alt="Sukkur Terminal">
+            </div>
+            <div class="terminal-info">
+                <h2>Sukkur Terminal</h2>
+                <p><span class="label">Address:</span> Gidu Chowk, Sukkur</p>
+                <p><span class="label">Phone:</span> 021-111-222-928</p>
+            </div>
+        </div>
+
+    </div>
+
+</body> 
+</html>
