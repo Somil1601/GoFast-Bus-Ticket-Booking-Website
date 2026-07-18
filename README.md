@@ -6,10 +6,11 @@ A responsive bus ticket booking website developed using **HTML**, **CSS**, and *
 
 ## 🌐 Live Demo
 
-🔗 **Website:** https://somil1601.github.io/GoFast-Bus-Ticket-Booking-Website/
+🔗 **Website:**  
+[Visit GoFast Website](https://somil1601.github.io/GoFast-Bus-Ticket-Booking-Website/)
 
 💻 **GitHub Repository:**  
-https://github.com/Somil1601/GoFast-Bus-Ticket-Booking-Website
+[View Source Code](https://github.com/Somil1601/GoFast-Bus-Ticket-Booking-Website)
 
 ---
 
